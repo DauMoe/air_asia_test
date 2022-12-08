@@ -7,19 +7,19 @@ const useGetContextContent = () => {
   return [{
     icon: <BsPenFill/>,
     content: "Edit",
-    callback: () => {}
+    cb: () => {}
   }, {
     icon: <TiExport/>,
     content: "Export",
-    callback: () => {}
+    cb: () => {}
   }, {
     icon: <IoIosSend/>,
     content: "Send",
-    callback: () => {}
+    cb: () => {}
   }, {
     icon: <RiDeleteBin6Fill/>,
     content: "Delete",
-    callback: () => {}
+    cb: () => {}
   }]
 }
 

@@ -1,10 +1,10 @@
 import './App.scss';
-import ContextMenu from './components/ContextMenu';
+import Card from './components/Card';
 
 const App = () => {
   return (
     <div className="App">
-      <ContextMenu/>
+      <Card/>
     </div>
   );
 }

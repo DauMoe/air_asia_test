@@ -8,6 +8,7 @@
   padding             : 10px;
   border-radius       : $round-10;
   font-size           : #{$context-menu-size}px;
+  position            : absolute;
 }
 
 .context-item-wrapper {

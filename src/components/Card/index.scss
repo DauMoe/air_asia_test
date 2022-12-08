@@ -1,0 +1,28 @@
+@import './../../App.scss';
+
+.card-wrapper {
+  display             : inline-block ;
+  background-color    : $white;
+  border-radius       : $round-10;
+  -webkit-box-shadow  : 10px 7px 16px 4px rgba(0,0,0,0.32); 
+  box-shadow          : 10px 7px 16px 4px rgba(0,0,0,0.32);
+  padding             : 20px;
+}
+
+.card-avatar-wrapper {
+  position      : relative;
+}
+
+.card-avatar-image {
+  border-radius : $round-10;
+}
+
+.card-avatar-status {
+  position: absolute;
+  width: 5;
+  height: 5;
+  border-radius: $round-50per;
+  background-color: $green-900;
+  bottom: 0;
+  right: 0
+}
