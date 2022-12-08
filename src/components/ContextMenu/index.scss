@@ -2,6 +2,7 @@
 
 .context-menu-wrapper {
   display             : inline-block;
+  visibility          : hidden;
   background          : $zinc-100;
   -webkit-box-shadow  : 10px 7px 16px 4px rgba(0,0,0,0.32); 
   box-shadow          : 10px 7px 16px 4px rgba(0,0,0,0.32);
@@ -9,6 +10,24 @@
   border-radius       : $round-10;
   font-size           : #{$context-menu-size}px;
   position            : absolute;
+  z-index             : 99999999;
+}
+
+.context-menu-show {
+  visibility          : visible;
+}
+
+.context-menu-wrapper::before {
+  position      : absolute;
+  content       : "";
+  width         : 0px;
+  height        : 0px;
+  border-bottom : 8px solid transparent;
+  border-right  : 8px solid transparent;
+  border-left   : 8px solid white;
+  border-top    : 8px solid transparent;
+  right         : -16px;
+  top           : 10px;
 }
 
 .context-item-wrapper {

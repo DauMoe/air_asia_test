@@ -1,18 +1,10 @@
 import './App.scss';
-import Card from './components/Card';
+import Section from './components/Section';
 
 const App = () => {
   return (
     <div className="App">
-      <Card
-        userId={1}
-        imageUrl={"/avatar/gentlement.png"}
-        status={"active"}
-        name={"Alfie Harrison"}
-        description={"Sydney, Australia"}
-        position={"Stratery director"}
-        progress={40}
-      />
+      <Section/>
     </div>
   );
 }

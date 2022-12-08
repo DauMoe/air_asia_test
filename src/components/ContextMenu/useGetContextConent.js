@@ -3,11 +3,11 @@ import { TiExport } from "react-icons/ti";
 import { IoIosSend } from "react-icons/io";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 
-const useGetContextContent = () => {
+export const useGetContextContent = () => {
   return [{
     icon: <BsPenFill/>,
     content: "Edit",
-    cb: () => {}
+    cb: (e) => {e.preventDefault()}
   }, {
     icon: <TiExport/>,
     content: "Export",
@@ -23,4 +23,6 @@ const useGetContextContent = () => {
   }]
 }
 
-export default useGetContextContent;
+export const useHandleClickContextMenu = (x, y) => {
+  
+};

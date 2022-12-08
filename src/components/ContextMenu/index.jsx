@@ -1,17 +1,22 @@
+import { useEffect, useRef } from 'react';
 import ContextItem from './ContextItem';
 import './index.scss';
-import useGetContextContent from './useGetContextConent';
 
 const ContextMenu = ({
-  x,
-  y,
+  show,
+  top,
+  left,
+  right,
+  bottom,
+  listContextItems,
   ...props
 }) => {
-  const listItem = useGetContextContent();
-  
-  return(
-    <div className='context-menu-wrapper' style={{top: x, left: y}}>
-      {listItem.map((item, index) => {
+  const contextMenuRef  = useRef();
+
+  if (!Array.isArray(listContextItems)) throw new Error("'listContextItems' must be an JSON Array");
+  return (
+    <div className={"context-menu-wrapper " + (show ? "context-menu-show" : undefined)} ref={contextMenuRef} style={{top: top - 10, left: left - 8 - (contextMenuRef.current?.offsetWidth || 0), bottom: bottom, right: right}}>
+      {listContextItems.map((item, index) => {
         return (
           <ContextItem 
             key={"_context_menu" + index} 
@@ -22,7 +27,7 @@ const ContextMenu = ({
         )
       })}
     </div>
-  );
+  )
 }
 
 export default ContextMenu;

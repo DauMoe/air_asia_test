@@ -1,96 +1,29 @@
 //Refer: https://tailwindcss.com/docs/background-color
 @use "sass:math";
+@import './color.scss';
 
-$black: #000;
-
-//White
-$zinc-100: rgb(255, 255, 255);
-$zinc-200: rgb(228 228 231);
-$zinc-300: rgb(212 212 216);
-$zinc-400: rgb(161 161 170);
-$zinc-500: rgb(113 113 122);
-$zinc-600: rgb(82 82 91);
-$zinc-700: rgb(63 63 70);
-$zinc-800: rgb(39 39 42);
-$zinc-900: rgb(24 24 27);
-
-//Green
-$green-lime-100: rgb(236 252 203);
-$green-lime-200: rgb(217 249 157);
-$green-lime-300: rgb(190 242 100);
-$green-lime-400: rgb(163 230 53);
-$green-lime-500: rgb(132 204 22);
-$green-lime-600: rgb(101 163 13);
-$green-lime-700: rgb(77 124 15);
-$green-lime-800: rgb(63 98 18);
-$green-lime-900: rgb(54 83 20);
-
-$green-100:	rgb(220 252 231);
-$green-200:	rgb(187 247 208);
-$green-300:	rgb(134 239 172);
-$green-400:	rgb(74 222 128);
-$green-500:	rgb(34 197 94);
-$green-600:	rgb(22 163 74);
-$green-700:	rgb(21 128 61);
-$green-800:	rgb(22 101 52);
-$green-900:	rgb(20 83 45);
-
-$green-cyan-100: rgb(207 250 254);
-$green-cyan-200: rgb(165 243 252);
-$green-cyan-300: rgb(103 232 249);
-$green-cyan-400: rgb(34 211 238);
-$green-cyan-500: rgb(6 182 212);
-$green-cyan-600: rgb(8 145 178);
-$green-cyan-700: rgb(14 116 144);
-$green-cyan-800: rgb(21 94 117);
-$green-cyan-900: rgb(22 78 99);
-
-$blue-sky-100: rgb(224 242 254);
-$blue-sky-200: rgb(186 230 253);
-$blue-sky-300: rgb(125 211 252);
-$blue-sky-400: rgb(56 189 248);
-$blue-sky-500: rgb(14 165 233);
-$blue-sky-600: rgb(2 132 199);
-$blue-sky-700: rgb(3 105 161);
-$blue-sky-800: rgb(7 89 133);
-$blue-sky-900: rgb(12 74 110);
-
-$blue-100: rgb(219 234 254);
-$blue-200: rgb(191 219 254);
-$blue-300: rgb(147 197 253);
-$blue-400: rgb(96 165 250);
-$blue-500: rgb(59 130 246);
-$blue-600: rgb(37 99 235);
-$blue-700: rgb(29 78 216);
-$blue-800: rgb(30 64 175);
-$blue-900: rgb(30 58 138);
-
-$purple-indigo-100: rgb(224 231 255);
-$purple-indigo-200: rgb(199 210 254);
-$purple-indigo-300: rgb(165 180 252);
-$purple-indigo-400: rgb(129 140 248);
-$purple-indigo-500: rgb(99 102 241);
-$purple-indigo-600: rgb(79 70 229);
-$purple-indigo-700: rgb(67 56 202);
-$purple-indigo-800: rgb(55 48 163);
-$purple-indigo-900: rgb(49 46 129);
-
-//Margin and padding
 @for $i from 0 through 100 {
   .margin-#{$i*5} {margin: #{$i*5}px !important}
   .mt-#{$i*5} {margin-top: #{$i*5}px !important}
   .mr-#{$i*5} {margin-right: #{$i*5}px !important}
   .mb-#{$i*5} {margin-bottom: #{$i*5}px !important}
   .ml-#{$i*5} {margin-left: #{$i*5}px !important}
+
+  .margin-#{$i} {margin: #{$i}px !important}
+  .mt-#{$i} {margin-top: #{$i}px !important}
+  .mr-#{$i} {margin-right: #{$i}px !important}
+  .mb-#{$i} {margin-bottom: #{$i}px !important}
+  .ml-#{$i} {margin-left: #{$i}px !important}
   
   .padding-#{$i*5} {padding: #{$i*5}px !important}
   .pt-#{$i*5} {padding-top: #{$i*5}px !important}
   .pr-#{$i*5} {padding-right: #{$i*5}px !important}
   .pb-#{$i*5} {padding-bottom: #{$i*5}px !important}
   .pl-#{$i*5} {padding-left: #{$i*5}px !important}
+
+  .border-#{i} {border-width: #{$i}px;}
 }
 
-//Border radius
 $round-25per: math.percentage(math.div(1, 4));
 $round-50per: math.percentage(math.div(1, 2));
 $round-5: 5px;
@@ -108,13 +41,4 @@ $context-menu-size: 14;
   contextMenuSize: $context-menu-size;
   round25Per: $round-25per;
   round50Per: $round-50per;
-  zinc100: $zinc-100;
-  zinc200: $zinc-200;
-  zinc300: $zinc-300;
-  zinc400: $zinc-400;
-  zinc500: $zinc-500;
-  zinc600: $zinc-600;
-  zinc700: $zinc-700;
-  zinc800: $zinc-800;
-  zinc900: $zinc-900;
 }
