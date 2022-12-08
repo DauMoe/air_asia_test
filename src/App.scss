@@ -1,8 +1,18 @@
 //Refer: https://tailwindcss.com/docs/background-color
 @use "sass:math";
 
-$white: #FFF;
 $black: #000;
+
+//White
+$zinc-100: rgb(255, 255, 255);
+$zinc-200: rgb(228 228 231);
+$zinc-300: rgb(212 212 216);
+$zinc-400: rgb(161 161 170);
+$zinc-500: rgb(113 113 122);
+$zinc-600: rgb(82 82 91);
+$zinc-700: rgb(63 63 70);
+$zinc-800: rgb(39 39 42);
+$zinc-900: rgb(24 24 27);
 
 //Green
 $green-lime-100: rgb(236 252 203);
@@ -65,6 +75,21 @@ $purple-indigo-700: rgb(67 56 202);
 $purple-indigo-800: rgb(55 48 163);
 $purple-indigo-900: rgb(49 46 129);
 
+//Margin and padding
+@for $i from 0 through 100 {
+  .margin-#{$i*5} {margin: #{$i*5}px !important}
+  .mt-#{$i*5} {margin-top: #{$i*5}px !important}
+  .mr-#{$i*5} {margin-right: #{$i*5}px !important}
+  .mb-#{$i*5} {margin-bottom: #{$i*5}px !important}
+  .ml-#{$i*5} {margin-left: #{$i*5}px !important}
+  
+  .padding-#{$i*5} {padding: #{$i*5}px !important}
+  .pt-#{$i*5} {padding-top: #{$i*5}px !important}
+  .pr-#{$i*5} {padding-right: #{$i*5}px !important}
+  .pb-#{$i*5} {padding-bottom: #{$i*5}px !important}
+  .pl-#{$i*5} {padding-left: #{$i*5}px !important}
+}
+
 //Border radius
 $round-25per: math.percentage(math.div(1, 4));
 $round-50per: math.percentage(math.div(1, 2));
@@ -81,4 +106,15 @@ $context-menu-size: 14;
 
 :export {
   contextMenuSize: $context-menu-size;
+  round25Per: $round-25per;
+  round50Per: $round-50per;
+  zinc100: $zinc-100;
+  zinc200: $zinc-200;
+  zinc300: $zinc-300;
+  zinc400: $zinc-400;
+  zinc500: $zinc-500;
+  zinc600: $zinc-600;
+  zinc700: $zinc-700;
+  zinc800: $zinc-800;
+  zinc900: $zinc-900;
 }

@@ -4,7 +4,15 @@ import Card from './components/Card';
 const App = () => {
   return (
     <div className="App">
-      <Card/>
+      <Card
+        userId={1}
+        imageUrl={"/avatar/gentlement.png"}
+        status={"active"}
+        name={"Alfie Harrison"}
+        description={"Sydney, Australia"}
+        position={"Stratery director"}
+        progress={40}
+      />
     </div>
   );
 }
