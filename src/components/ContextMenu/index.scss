@@ -1,0 +1,20 @@
+@import './../../App.scss';
+
+.context-menu-wrapper {
+  display             : inline-block;
+  background          : $white;
+  -webkit-box-shadow  : 10px 7px 16px 4px rgba(0,0,0,0.32); 
+  box-shadow          : 10px 7px 16px 4px rgba(0,0,0,0.32);
+  padding             : 10px;
+  border-radius       : $round-10;
+  font-size           : #{$context-menu-size}px;
+}
+
+.context-item-wrapper {
+  cursor    : pointer;
+  padding   : 10px
+}
+
+.context-item-content {
+  color     : #707070;
+}
