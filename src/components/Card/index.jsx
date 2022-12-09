@@ -105,4 +105,6 @@ const Card = ({
     </div>
   )
 }
-export default Card;
+export default React.memo(Card, (prevProps, nextProps) => {
+  return prevProps.allowOpenContextMenu === nextProps.allowOpenContextMenu;
+});

@@ -15,7 +15,7 @@ const ContextMenu = ({
 
   if (!Array.isArray(listContextItems)) throw new Error("'listContextItems' must be an JSON Array");
   return (
-    <div className={"context-menu-wrapper " + (show ? "context-menu-show" : undefined)} ref={contextMenuRef} style={{top: top - 10, left: left - 8 - (contextMenuRef.current?.offsetWidth || 0), bottom: bottom, right: right}}>
+    <div className={"context-menu-wrapper" + (show ? " context-menu-show" : '')} ref={contextMenuRef} style={{top: top - 10, left: isNaN(+left) ? undefined : left - 8 - (contextMenuRef.current?.offsetWidth || 0), bottom: bottom, right: right}}>
       {listContextItems.map((item, index) => {
         return (
           <ContextItem 
