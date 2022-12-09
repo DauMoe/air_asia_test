@@ -3,7 +3,36 @@
 .grid-container {
   display               : grid;
   grid-gap              : 30px;
-  grid-template-columns : auto auto auto auto auto;
+}
+
+@media (max-width: #{$xs}) {
+  .grid-container {
+    grid-template-columns : auto;
+  }   
+}
+
+@media (min-width: #{$xs}) and (max-width: #{$s}) {
+  .grid-container {
+    grid-template-columns : auto auto;
+  }   
+}
+
+@media (min-width: #{$s}) and (max-width: #{$xl}) {
+  .grid-container {
+    grid-template-columns : auto auto auto;
+  }   
+}
+
+@media (min-width: #{$l}) and (max-width: #{$xl}) {
+  .grid-container {
+    grid-template-columns : auto auto auto auto;
+  }   
+}
+
+@media (min-width: #{$xl}) {
+  .grid-container {
+    grid-template-columns : auto auto auto auto auto;
+  }   
 }
 
 .section-wrapper {

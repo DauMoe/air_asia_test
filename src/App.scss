@@ -1,6 +1,7 @@
 //Refer: https://tailwindcss.com/docs/background-color
 @use "sass:math";
 @import './color.scss';
+@import './Breakpoint.scss';
 
 @for $i from 0 through 100 {
   .margin-#{$i*5} {margin: #{$i*5}px !important}
